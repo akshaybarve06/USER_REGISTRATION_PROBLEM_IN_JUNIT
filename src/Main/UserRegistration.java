@@ -13,4 +13,5 @@ public class UserRegistration {
     public boolean checkName(String firstName) {
         return Pattern.matches(namePattern,firstName);
     }
+
 }
