@@ -6,27 +6,29 @@ import Main.UserRegistration;
 
 public class UserRegistrationTest {
 
-    UserRegistration object=new UserRegistration();
+    UserRegistration object = new UserRegistration();
+
     @Test
-    public void givenUserFirstName_validThenTrue(){
-        boolean firstName=object.checkName("SampleFirstName");
-        Assert.assertTrue(firstName);
-    }
-    @Test
-    public void givenUserFirstName_invalidThenFalse(){
-        boolean firstName=object.checkName("samplefirstname");
+    public void userFirstName_ValidThenTrue() {
+        boolean firstName = object.checkName("SampleFirstName");
         Assert.assertTrue(firstName);
     }
 
     @Test
-    public void givenUserLastName_validThenTrue(){
-        boolean lastName=object.checkName("SampleLastName");
-        Assert.assertTrue(lastName);
+    public void userFirstName_InvalidThenFalse() {
+        boolean firstName = object.checkName("samplefirstname");
+        Assert.assertFalse(firstName);
     }
+
     @Test
-    public void givenUserLastName_invalidThenFalse(){
-        boolean lastName=object.checkName("samplelastname");
+    public void userLastName_ValidThenTrue() {
+        boolean lastName = object.checkName("SampleLastName");
         Assert.assertTrue(lastName);
     }
 
+    @Test
+    public void userLastName_InvalidThenFalse() {
+        boolean lastName = object.checkName("samplelastname");
+        Assert.assertFalse(lastName);
+    }
 }
