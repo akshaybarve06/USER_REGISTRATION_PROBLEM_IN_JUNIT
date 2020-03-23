@@ -7,6 +7,7 @@ public class UserRegistration {
 
     String namePattern="^[A-Z][a-zA-Z]{2,}$";
     String emailPattern="^[a-zA-Z]+([+]?[-]?[.]?[_]?[a-zA-Z0-9]+)?[@]{1}[a-z]+[.]{1}[a-z]{2,}([.]?[a-z]+)?$";
+    String mobilePattern="[0-9]{2}[ ]{1}[0-9]{10}$";
 
     public static void main(String[] args) {
         System.out.println("Welcome To User Registration");
@@ -16,6 +17,9 @@ public class UserRegistration {
     }
     public boolean checkEmail(String email) {
         return Pattern.matches(emailPattern,email);
+    }
+    public boolean checkMobile(String mobile) {
+        return Pattern.matches(mobilePattern,mobile);
     }
 
 }

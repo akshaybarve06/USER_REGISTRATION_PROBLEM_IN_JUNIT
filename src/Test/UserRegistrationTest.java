@@ -48,4 +48,14 @@ public class UserRegistrationTest {
             Assert.assertFalse(Email);
         }
     }
+    @Test
+    public void mobileNumber_ValidThenTrue() {
+        boolean MobileNumber=object.checkMobile("91 1234567890");
+        Assert.assertTrue(MobileNumber);
+    }
+    @Test
+    public void mobileNumber_ValidThenFalse() {
+        boolean MobileNumber=object.checkMobile("234567890");
+        Assert.assertFalse(MobileNumber);
+    }
 }
