@@ -60,12 +60,22 @@ public class UserRegistrationTest {
     }
     @Test
     public void password_ValidThenTrue() {
-        boolean Password=object.checkPassword("aaaaaaaaaaa");
+        boolean Password=object.checkPassword1("abababababab");
         Assert.assertTrue(Password);
     }
     @Test
     public void password_InvalidThenFalse() {
-        boolean Password=object.checkPassword("aaaa");
+        boolean Password=object.checkPassword1("abab");
         Assert.assertFalse(Password);
+    }
+    @Test
+    public void password2_ValidThenTrue() {
+        boolean Password2=object.checkPassword2("AkshayBarve");
+        Assert.assertTrue(Password2);
+    }
+    @Test
+    public void password2_InvalidThenFalse() {
+        boolean Password2=object.checkPassword2("akshaybarve");
+        Assert.assertFalse(Password2);
     }
 }
